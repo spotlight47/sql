@@ -1,0 +1,17 @@
+CREATE TABLE Appointment
+/****************************************************
+Name:	CreateAppointmentTable
+Purpose: Creates appointment table (practice)
+Author:  Robert Lazo
+Date:  02 January 2020
+
+Accepts:
+Returns:
+Revisions:
+****************************************************/
+(	AppointmentID Int
+,	Description		VarChar(50)
+,	StartDateTime	DateTime
+,	EndDateTime		DateTime
+,	Resource		VarChar(50) Null
+)
