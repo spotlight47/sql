@@ -1,0 +1,19 @@
+/*** 
+Returns a date representing the last date 
+of any given month.
+2020-01-02
+Robert Lazo
+***/
+
+CREATE Function dbo.fn_LastOfMonth(@TheDate DateTime)
+Returns DateTime
+AS
+BEGIN
+  DECLARE @FirstOfMonth DateTime
+  DECLARE @DaysInMonth Int
+  DECLARE @RetDate DateTime
+
+  SET @FirstOfMonth = DATEADD(mm, DATEDIFF(mm, 0, @TheDate), 0)
+  SET @DaysInMonth = DATEDIFF(d, @FirstOfMonth, DATEADD(m,1, @FirstOfMonth))
+  RETURN DATEADD(d, @DaysInMonth-1, @FirstOfMonth)
+END

@@ -1,0 +1,7 @@
+/*** Header notes
+* The name of the scripted object
+* The name of the designer or programmer
+* contact information
+* creation date
+* revision dates and notes* inofrmation about what the object does and how it's called
+* validation testing and approval notes
